@@ -1,13 +1,18 @@
-import './App.css';
+import React from "react";
+import Register from "./pages/Register";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Login from "./pages/Login";
+import Cards from "./pages/Cards";
+import "react-toastify/dist/ReactToastify.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      heloo
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/" element={<Cards />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

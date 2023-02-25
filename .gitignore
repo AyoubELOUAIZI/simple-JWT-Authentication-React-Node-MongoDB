@@ -1,5 +1,6 @@
 
 # dependencies
 server/node_modules
+server/.env
 public/node_modules
 
